@@ -91,8 +91,7 @@ class TurnstileCaptchaField extends FormField
 
 
         Requirements::javascript(
-            'https://challenges.cloudflare.com/turnstile/v0/api.js?language='
-                . Locale::getPrimaryLanguage(i18n::get_locale())
+            'https://challenges.cloudflare.com/turnstile/v0/api.js'
                 . ($this->config()->js_onload_callback ? '&onload=' . $this->config()->js_onload_callback : '')
                 . ($this->getRenderType() === 'explicit' ? '&render=explicit' : ''),
             [
